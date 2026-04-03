@@ -986,19 +986,24 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => obs.observe(el));
 
-  // Skill bars
+// Skill bars
   const bars = document.querySelectorAll('.skill-fill');
   const barObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         const w = parseFloat(e.target.dataset.width);
         e.target.style.width = (w * 100) + '%';
+        e.target.style.transform = 'scaleX(1)';
         e.target.classList.add('animate');
         barObs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.3 });
-  bars.forEach(b => { b.style.width = '0%'; barObs.observe(b); });
+  }, { threshold: 0.1 }); // lowered from 0.3 to 0.1
+  bars.forEach(b => {
+    b.style.width = '0%';
+    b.style.transform = 'scaleX(0)';
+    barObs.observe(b);
+  });
 
   // Cursor hover on links
   document.querySelectorAll('a, button').forEach(el => {
