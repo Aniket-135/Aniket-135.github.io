@@ -8,6 +8,7 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+
   :root {
     --bg: #0a0a0a;
     --surface: #111111;
@@ -20,7 +21,9 @@
     --card: #141414;
   }
 
+
   html { scroll-behavior: smooth; }
+
 
   body {
     background: var(--bg);
@@ -30,6 +33,7 @@
     overflow-x: hidden;
     cursor: none;
   }
+
 
   /* CUSTOM CURSOR */
   .cursor {
@@ -54,6 +58,7 @@
     transition: transform 0.15s ease, width 0.3s, height 0.3s, border-color 0.3s;
   }
 
+
   /* NOISE OVERLAY */
   body::before {
     content: '';
@@ -64,6 +69,7 @@
     z-index: 9997;
     opacity: 0.5;
   }
+
 
   /* NAV */
   nav {
@@ -108,6 +114,7 @@
   }
   .nav-links a:hover { color: var(--text); }
   .nav-links a:hover::after { transform: scaleX(1); }
+
 
   /* HERO */
   .hero {
@@ -200,6 +207,7 @@
   }
   .btn-ghost:hover { border-color: var(--muted); color: var(--text); }
 
+
   /* HERO RIGHT — STATS */
   .hero-right {
     display: flex; flex-direction: column; gap: 1.5rem;
@@ -231,6 +239,7 @@
   }
   .stat-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
+
   .hero-contact-strip {
     display: flex; gap: 1rem; flex-wrap: wrap;
     margin-top: 0.5rem;
@@ -246,6 +255,7 @@
     transition: all 0.2s;
   }
   .contact-pill:hover { color: var(--accent); border-color: rgba(232,255,71,0.3); }
+
 
   /* SECTIONS */
   section { padding: 6rem 3rem; position: relative; }
@@ -269,6 +279,7 @@
     flex: 1; height: 1px;
     background: linear-gradient(to right, var(--border), transparent);
   }
+
 
   /* EXPERIENCE */
   .exp-grid { display: flex; flex-direction: column; gap: 2px; }
@@ -354,6 +365,7 @@
     text-transform: uppercase;
   }
 
+
   /* PROJECTS */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
   .project-card {
@@ -429,6 +441,7 @@
     margin-bottom: 1rem;
   }
 
+
   /* SKILLS */
   .skills-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
   .skills-group-title {
@@ -477,6 +490,7 @@
     transition: all 0.2s;
   }
   .skill-pill:hover { border-color: rgba(232,255,71,0.3); color: var(--accent); }
+
 
   /* EDUCATION & CERTS */
   .edu-certs { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -530,6 +544,7 @@
     top: 0.3rem;
   }
 
+
   /* CONTACT */
   .contact-section {
     background: var(--card);
@@ -554,6 +569,7 @@
   }
   .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
 
+
   /* FOOTER */
   footer {
     padding: 2rem 3rem;
@@ -565,18 +581,22 @@
     letter-spacing: 0.08em;
   }
 
+
   /* SCROLL ANIMATIONS */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
 
   /* SCROLLBAR */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
 
   /* MOBILE */
   @media (max-width: 1024px) {
@@ -601,14 +621,17 @@
 </head>
 <body>
 
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
+
 
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">AP<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#ai-built">Built with AI</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
@@ -616,38 +639,37 @@
   </ul>
 </nav>
 
+
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg-grid"></div>
   <div class="hero-left">
-    <div class="hero-tag">Available for opportunities</div>
+    <div class="hero-tag">Open for opportunities</div>
     <h1 class="hero-name">
-      Aniket<br>
-      <span class="line2">Powale</span>
+      Aniket<br>Powale
+      <!-- <span class="line2">Powale</span> -->
     </h1>
     <p class="hero-role">AI Software Developer </p>
     <p class="hero-desc">Building responsive web experiences, Shopify storefronts, and data dashboards. Mumbai-based developer passionate about AI-driven tools and clean, purposeful code.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects ↗</a>
       <a href="mailto:aniket2001powale@gmail.com" class="btn btn-ghost">Get In Touch</a>
+      <div class="hero-contact-strip" >
+        <a href="mailto:aniket2001powale@gmail.com" class="contact-pill">✉ aniket2001powale@gmail.com</a>
+        <a href="tel:+918451821044" class="contact-pill">📞 +91 84518 21044</a>
+        <a href="https://www.linkedin.com/in/aniket-powale" target="_blank" class="contact-pill">💼 LinkedIn</a>
+        <a href="https://github.com/aniket-135" target="_blank" class="contact-pill">🐙 GitHub</a>
+       
+      </div>
     </div>
-    <div class="hero-contact-strip" style="margin-top: 2rem;">
-      <a href="mailto:aniket2001powale@gmail.com" class="contact-pill">✉ aniket2001powale@gmail.com</a>
-      <a href="tel:+918451821044" class="contact-pill">📞 +91 84518 21044</a>
-      <a href="https://www.linkedin.com/in/aniket-powale" target="_blank" class="contact-pill">💼 LinkedIn</a>
-      <a href="https://github.com/aniket-135" target="_blank" class="contact-pill">🐙 GitHub</a>
-      
-    </div>
+   
   </div>
   <div class="hero-right">
     <div class="stat-card">
       <div class="stat-num">2+</div>
       <div class="stat-label">Year of Experience</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Live Client Projects</div>
-    </div>
+   
     <div class="stat-card">
       <div class="stat-num">8.48</div>
       <div class="stat-label">CGPA — B.Sc IT</div>
@@ -659,14 +681,16 @@
   </div>
 </section>
 
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header reveal">
-    <span class="section-num">02 /</span>
+    <span class="section-num">01 /</span>
     <h2 class="section-title">Experience</h2>
     <div class="section-line"></div>
   </div>
   <div class="exp-grid">
+
 
     <div class="exp-item reveal">
       <div>
@@ -691,6 +715,7 @@
       <div class="exp-date">Feb 2025 — Present</div>
     </div>
 
+
     <div class="exp-item reveal">
       <div>
         <div class="exp-company">Digital Guide.in</div>
@@ -712,21 +737,61 @@
       <div class="exp-date">Mar 2024 — Feb 2025</div>
     </div>
 
+
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" style="background: #0d0d0d;">
+
+<!-- PROJECTS BUILT WITH AI -->
+<section id="ai-built" style="background: #0d0d0d;">
   <div class="section-header reveal">
     <span class="section-num">02 /</span>
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Projects built with AI</h2>
     <div class="section-line"></div>
   </div>
   <div class="projects-grid">
 
     <div class="project-card reveal">
       <div class="project-header">
- <div class="project-top-right">
+        <div class="project-top-right">
+          <a href="https://github.com/aniket-135" target="_blank" class="project-link">↗ View Code</a>
+          <span class="project-scope-badge badge-client">Personal Project</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-name">TaskFlow</div>
+        <div class="project-desc">AI-assisted role-based task management system built with PHP & MySQL. Features a 3-tier hierarchy (Director → Manager → Employee) with role-specific dashboards, AJAX status updates, progress tracking, and a 6-month analytics chart — developed using Claude AI for architecture, code generation, and debugging.</div>
+        <div class="exp-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Claude AI</span>
+          <span class="tag">AJAX</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- PROJECTS -->
+<section id="projects" style="background: #0d0d0d;">
+  <div class="section-header reveal">
+    <span class="section-num">03 /</span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-grid">
+
+
+    <div class="project-card reveal">
+      <div class="project-header">
+       
+        <div class="project-top-right">
           <div style="display: flex; gap:5px;">
           <a href="https://acwo.com" target="_blank" class="project-link">↗ Visit</a>
           <a href="https://mobilla.in/" target="_blank" class="project-link">↗ Visit</a>
@@ -744,11 +809,10 @@
     </div>
 
 
-       
-  <div class="project-card reveal">
+
+    <div class="project-card reveal">
       <div class="project-header">
-        
- 
+   
         <div class="project-top-right">
           <a href="https://borshahairextensions.in" target="_blank" class="project-link">↗ Visit</a>
           <span class="project-scope-badge badge-client">Digital Guide.in</span>
@@ -762,6 +826,7 @@
         </div>
       </div>
     </div>
+
 
     <div class="project-card reveal">
       <div class="project-header">
@@ -780,9 +845,10 @@
       </div>
     </div>
 
+
     <div class="project-card reveal">
       <div class="project-header">
-        
+       
         <div class="project-top-right">
           <a href="https://genexttechnologies.com/" target="_blank" class="project-link">↗ Visit</a>
           <span class="project-scope-badge badge-client">Digital Guide.in</span>
@@ -797,11 +863,13 @@
       </div>
     </div>
 
-  
+
+    
+
 
     <div class="project-card reveal">
       <div class="project-header">
-        
+       
         <div class="project-top-right">
           <span class="project-scope-badge badge-academic">Academic Project</span>
         </div>
@@ -815,17 +883,20 @@
       </div>
     </div>
 
+
   </div>
 </section>
+
 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header reveal">
-    <span class="section-num">03 /</span>
+    <span class="section-num">04 /</span>
     <h2 class="section-title">Skills</h2>
     <div class="section-line"></div>
   </div>
   <div class="skills-three-col" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;">
+
 
     <!-- COLUMN 1: Technical -->
     <div class="reveal">
@@ -864,6 +935,7 @@
       </div>
     </div>
 
+
     <!-- COLUMN 2: AI Tools -->
     <div class="reveal">
       <div class="skills-group-title">AI Tools</div>
@@ -896,6 +968,7 @@
       </div>
     </div>
 
+
     <!-- COLUMN 3: Interests -->
     <div class="reveal">
       <div class="skills-group-title">Interests</div>
@@ -914,6 +987,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- EDUCATION & CERTS -->
 <section id="education" style="background: #0d0d0d;">
@@ -939,6 +1013,7 @@
   </div>
 </section>
 
+
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="contact-eyebrow">Let's work together</div>
@@ -952,11 +1027,13 @@
   </div>
 </section>
 
+
 <footer>
   <span>© 2025 Aniket Powale</span>
   <span>Built with HTML · CSS · JS</span>
   <span>Mumbai, Maharashtra</span>
 </footer>
+
 
 <script>
   // Cursor
@@ -974,9 +1051,11 @@
   }
   animRing();
 
+
   // Nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+
 
   // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
@@ -990,24 +1069,21 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => obs.observe(el));
 
-// Skill bars
+
+  // Skill bars
   const bars = document.querySelectorAll('.skill-fill');
   const barObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         const w = parseFloat(e.target.dataset.width);
         e.target.style.width = (w * 100) + '%';
-        e.target.style.transform = 'scaleX(1)';
         e.target.classList.add('animate');
         barObs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1 }); // lowered from 0.3 to 0.1
-  bars.forEach(b => {
-    b.style.width = '0%';
-    b.style.transform = 'scaleX(0)';
-    barObs.observe(b);
-  });
+  }, { threshold: 0.3 });
+  bars.forEach(b => { b.style.width = '0%'; barObs.observe(b); });
+
 
   // Cursor hover on links
   document.querySelectorAll('a, button').forEach(el => {
@@ -1025,3 +1101,4 @@
 </script>
 </body>
 </html>
+
