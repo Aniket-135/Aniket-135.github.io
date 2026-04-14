@@ -233,7 +233,13 @@
   .stat-card:hover::before { transform: scaleY(1); }
   .stat-num {
     font-family: 'Syne', sans-serif;
-    font-size: 2.5rem; font-weight: 800;
+    font-size: 35px; font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-num-1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem; font-weight: 600;
     color: var(--accent);
     line-height: 1;
   }
@@ -652,6 +658,7 @@
     <p class="hero-role">AI Software Developer </p>
     <p class="hero-desc">Building responsive web experiences, Shopify storefronts, and data dashboards. Mumbai-based developer passionate about AI-driven tools and clean, purposeful code.</p>
     <div class="hero-cta">
+      <a href="#ai-built" class="btn btn-primary">AI Projects Gallery ↗</a>
       <a href="#projects" class="btn btn-primary">View Projects ↗</a>
       <a href="mailto:aniket2001powale@gmail.com" class="btn btn-ghost">Get In Touch</a>
       <div class="hero-contact-strip" >
@@ -670,6 +677,12 @@
       <div class="stat-label">Year of Experience</div>
     </div>
    
+    <div class="stat-card">
+      <div class="stat-num">2 <span class="stat-num-1">Projects</span></div>
+      <div class="stat-label">Built with AI</div>
+    </div>
+
+
     <div class="stat-card">
       <div class="stat-num">8.48</div>
       <div class="stat-label">CGPA — B.Sc IT</div>
@@ -772,6 +785,28 @@
         </div>
       </div>
     </div>
+
+    <div class="project-card reveal">
+      <div class="project-header">
+        <div class="project-top-right">
+          <a href="https://github.com/Aniket-135/splittrip" target="_blank" class="project-link">↗ View Code</a>
+          <span class="project-scope-badge badge-client">Personal Project</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-name">SplitTrip</div>
+        <div class="project-desc">AI-assisted expense splitting web app built with vanilla JavaScript. Features dual-mode splitting (Trip Split & Groups), per-expense participant selection, lifetime group balances, per-member profile dashboards, and a debt-settlement algorithm that calculates minimum transactions to clear all balances — developed using Claude AI for UI/UX design, algorithm logic, and debugging.</div>
+        <div class="exp-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Claude AI</span>
+          <span class="tag">localStorage</span>
+          <span class="tag">Algorithm</span>
+        </div>
+      </div>
+    </div>
+
 
   </div>
 </section>
